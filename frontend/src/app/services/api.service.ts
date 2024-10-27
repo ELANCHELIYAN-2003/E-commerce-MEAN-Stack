@@ -17,7 +17,7 @@ export class ApiService {
   apiCart: number[] = [];
   products: any[] = [];
   cartCount = new BehaviorSubject<any[]>([]);
-  private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = 'https://e-commerce-mean-stack.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 
@@ -29,7 +29,7 @@ export class ApiService {
       password,
     };
     // server call to register an account and return response to register component
-    return this.http.post('http://localhost:3000/register', body);
+    return this.http.post('https://e-commerce-mean-stack.onrender.com/register', body);
   }
 
   //login
@@ -39,17 +39,17 @@ export class ApiService {
       password,
     };
     // server call to register an account and return response to login component
-    return this.http.post('http://localhost:3000/login', body);
+    return this.http.post('https://e-commerce-mean-stack.onrender.com/login', body);
   }
 
   //all products api
   getAllProducts() {
-    return this.http.get('http://localhost:3000/all-products');
+    return this.http.get('https://e-commerce-mean-stack.onrender.com/all-products');
   }
 
   //view products api
   viewProduct(productId: any) {
-    return this.http.get('http://localhost:3000/view-product/' + productId);
+    return this.http.get('https://e-commerce-mean-stack.onrender.com/view-product/' + productId);
   }
 
   // appending token to http header
@@ -73,7 +73,7 @@ export class ApiService {
       productId,
     };
     return this.http.post(
-      'http://localhost:3000/addToWishlist/',
+      'https://e-commerce-mean-stack.onrender.com/addToWishlist/',
       body,
       this.appendToken()
     );
@@ -86,7 +86,7 @@ export class ApiService {
       productId,
     };
     return this.http.put(
-      'http://localhost:3000/removeFromWishlist/',
+      'https://e-commerce-mean-stack.onrender.com/removeFromWishlist/',
       body,
       this.appendToken()
     );
@@ -100,7 +100,7 @@ export class ApiService {
       count,
     };
     return this.http.post(
-      'http://localhost:3000/addToCart/',
+      'https://e-commerce-mean-stack.onrender.com/addToCart/',
       body,
       this.appendToken()
     );
@@ -114,7 +114,7 @@ export class ApiService {
       count,
     };
     return this.http.put(
-      'http://localhost:3000/updateCartItemCount/',
+      'https://e-commerce-mean-stack.onrender.com/updateCartItemCount/',
       body,
       this.appendToken()
     );
@@ -127,7 +127,7 @@ export class ApiService {
       productId,
     };
     return this.http.put(
-      'http://localhost:3000/removeFromCart/',
+      'https://e-commerce-mean-stack.onrender.com/removeFromCart/',
       body,
       this.appendToken()
     );
@@ -139,7 +139,7 @@ export class ApiService {
       email,
     };
     return this.http.put(
-      'http://localhost:3000/emptyCart/',
+      'https://e-commerce-mean-stack.onrender.com/emptyCart/',
       body,
       this.appendToken()
     );
@@ -167,7 +167,7 @@ export class ApiService {
       details,
     };
     return this.http.post(
-      'http://localhost:3000/addToCheckout/',
+      'https://e-commerce-mean-stack.onrender.com/addToCheckout/',
       body,
       this.appendToken()
     );
@@ -181,7 +181,7 @@ export class ApiService {
       total,
     };
     return this.http.post(
-      'http://localhost:3000/addOrder/',
+      'https://e-commerce-mean-stack.onrender.com/addOrder/',
       body,
       this.appendToken()
     );
@@ -189,14 +189,14 @@ export class ApiService {
 
   getWishlist(email: any) {
     return this.http.get(
-      'http://localhost:3000/getWishlist/' + email,
+      'https://e-commerce-mean-stack.onrender.com/getWishlist/' + email,
       this.appendToken()
     );
   }
 
   getMyOrders(email: any) {
     return this.http.get(
-      'http://localhost:3000/getMyOrders/' + email,
+      'https://e-commerce-mean-stack.onrender.com/getMyOrders/' + email,
       this.appendToken()
     );
   }
