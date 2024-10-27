@@ -8,7 +8,7 @@ const { Product, addProduct } = require('./services/db'); // Import addProduct
 
 // Configure CORS to allow requests from frontend
 server.use(cors({
-  origin: ['https://e-commerce-mean-stack.onrender.com', 'http://localhost:4200','http://localhost:3000'], // Allow both URLs
+  origin: ['https://e-commerce-mean-stack.onrender.com'], // Allow both URLs
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Access-Token']
 }));
@@ -16,7 +16,7 @@ server.use(cors({
 server.use(bodyParser.json());
 server.use(express.json());
 
-server.listen("https://e-commerce-mean-stack.onrender.com", () => {
+server.listen(3000, () => {
   console.log("Server running on port 3000");
 });
 
