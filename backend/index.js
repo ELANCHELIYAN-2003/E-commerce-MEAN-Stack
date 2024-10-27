@@ -15,8 +15,8 @@ server.use(cors({
 
 server.use(bodyParser.json());
 server.use(express.json());
-const PORT ='https://e-commerce-mean-stack.onrender.com' || 3000;
-server.listen(PORT, () => {
+
+server.listen(3000, () => {
   console.log("Server running on port 3000");
 });
 
