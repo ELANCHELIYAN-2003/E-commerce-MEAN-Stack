@@ -19,7 +19,10 @@ server.use(express.json());
 server.listen(3000, () => {
   console.log("Server running on port 3000");
 });
-
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Welcome to the shoppero!');
+});
 // Application-specific middleware
 const appMiddleware = (req, res, next) => {
   console.log("inside application middleware");
