@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', true); // To suppress the deprecation warning
-mongoose.connect("mongodb://127.0.0.1:27017/foodapp", () => {
+mongoose.connect("mongodb+srv://user_social:Surya%402004@cluster0.3d3l4gg.mongodb.net/food-app", () => {
   console.log("mongodb connection successful!!");
 });
 
