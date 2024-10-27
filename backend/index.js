@@ -8,7 +8,7 @@ const { Product, addProduct } = require('./services/db'); // Import addProduct
 
 // Configure CORS to allow requests from frontend
 server.use(cors({
-  origin: ['https://e-commerce-mean-stack.onrender.com', 'http://localhost:4200','http://localhost:3000'], // Allow both URLs
+  origin: '*', // Allow both URLs
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Access-Token']
 }));
