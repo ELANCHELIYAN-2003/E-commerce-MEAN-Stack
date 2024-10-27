@@ -16,7 +16,7 @@ server.use(cors({
 server.use(bodyParser.json());
 server.use(express.json());
 
-server.listen(3000, () => {
+server.listen("https://e-commerce-mean-stack.onrender.com", () => {
   console.log("Server running on port 3000");
 });
 
@@ -45,7 +45,7 @@ const jwtMiddleware = (req, res, next) => {
 };
 
 server.get('/', (req, res) => {
-  res.send('Welcome to the !');
+  res.send('Welcome to the ');
 });
 
 // Register API

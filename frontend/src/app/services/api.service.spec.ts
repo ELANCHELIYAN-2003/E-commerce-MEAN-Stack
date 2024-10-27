@@ -45,7 +45,7 @@ describe('ApiService', () => {
 
     service.addToCheckout(email, orderID, transactionID, dateAndTime, amount, status, products, detailes).subscribe();
 
-    const req = httpMock.expectOne('http://localhost:3000/addToCheckout/');
+    const req = httpMock.expectOne('https://e-commerce-mean-stack.onrender.com/addToCheckout/');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({
       email,
